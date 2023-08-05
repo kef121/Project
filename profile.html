@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <link rel="stylesheet" href="style2.css">
+        <title>Profile</title>
+    </head>
+
+    <body>
+        <!-------------------     NAVBAR ------------------>
+        <div id="all-sections" class="navbar">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <h1>I<span class="one">GB</span>O<span class="two">LINGO</span></h1>
+
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="subjects.html">Subjects</a></li>
+                    <li><a href="test.html">Test</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                </ul>
+            </div>
+            <div class="nav-menu-right">
+                <ul>
+                    <li><a href="login.html" id="login">Login</a></li>
+                    <li><a href="signup.html" id="register">Register</a></li>
+                    <li><a href="profile.html"><i class="fa fa-user"></i></a></li>
+                </ul>
+                
+            </div>
+            
+            
+        </div>
+
+
+
+        <!-------------------     PROFILE ------------------>
+        <div  class="form-container">
+            <form action="" method="post">
+                <h3>Update Profile</h3>
+                <span>Your name</span>
+                <input type="text" name="name" placeholder="Goodness Okeke" maxlength="100" class="profile-box"><br>
+                <span>Your email</span>
+                <input type="email" name="email" placeholder="goodnessokeke@gmail.com" maxlength="100" class="profile-box"><br>
+                <span>Old password</span>
+                <input type="password" name="old-pass" placeholder="enter your old password" maxlength="50" class="profile-box"><br>
+                <span>New password</span>
+                <input type="password" name="new-pass" placeholder="enter your new password" maxlength="50" class="profile-box"><br>
+                <span>Confirm password</span>
+                <input type="password" name="confirm-pass" placeholder="confirm your new password" maxlength="50" class="profile-box"><br>
+                <span>Update Picture</span>
+                <input type="file" name="image" accept="images/*" class="profile-box" >
+                <input type="submit" name="submit" value="Update Profile" class="submit-box">
+            </form>
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+    
+</html>

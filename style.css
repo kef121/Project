@@ -1,86 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Creepster&family=Flavors&family=Henny+Penny&family=Kablammo&family=Luckiest+Guy&family=Pacifico&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --very-light-blue: #b7d6ec;
+    --light-blue: #7eb3d1;
+    --dark-blue: #379fff;
+    --very-dark-blue: #2467a7;
+    --light-black: #3d3d3d;
+    --lighter-black: #525252;
+    --light-orange: #ff9839;
+    --lighter-orange: #f7e3d0;
+    --light-green: #8bc53d;
+    --lighter-green: #e0f5ca;
+    --light-yellow: #ffd243;
+    --lighter-yellow: #fdefca;
+    --background-white: #f7f7f7;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Philosopher', sans-serif;
 }
 
-section {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100%;
-}
-
-section .img-box {
+.section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 35%;
-    height: 100%;
-    background-color: #5A31A6;
+    background: var(--background-white);
+    height: 100vh;
 }
 
-section .logo {
-    padding-right: 4rem;
-    color: #FDB92B;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 2.5rem;
-    font-weight: 500;
-}
 
-section img {
-    width: 390px;
-    padding-top: 2rem;
-}
-
-section .content-box {
+.section .login-box {
     display: flex;
     flex-direction: column;
-    padding: 1rem 7rem 0 7rem;
-    width: 65%;
-    height: 100%;
-    background-color: #ffffff;
-    
+    padding: 1rem 4rem;
+    width: 40%;
+    height: 65%;
+    background-color: var(--very-dark-blue);
+    border-radius: 5px;
 }
 
-section .content-box h2 {
+.section .signup-box {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 4rem;
+    width: 40%;
+    height: 90%;
+    background-color: var(--very-dark-blue);
+    border-radius: 5px;
+}
+
+.section h2 {
+    text-align: center;
     font-size: 2rem;
-    color: #FDB92B;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
+    color: #f0f0f0;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
-.inputs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    
-}
 
-.inputs .three .four {
-    
-}
-
-section .input-field {
+.section .input-field {
     position: relative;
     min-width: 300px;
     height: 50px;
-    margin-bottom: 2rem;
-    margin-right: 2rem;
+    margin-bottom: 2.5rem;
+
 }
 
 .input-field input {
     width: 100%;
     height: 100%;
-    border: 1px solid #6A696A;
-    border-radius: 10px;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
     padding-left: 12px;
     outline: none;
-    background: #ffffff;
-    color: #FDB92B;
+    background: none;
+    color: #f0f0f0;
 }
 
 .input-field label {
@@ -91,20 +89,86 @@ section .input-field {
     transition: all .5s ease;
     font-size: 1rem;
     pointer-events: none;
-    color: #FDB92B;
-    font-family: 'Poppins', sans-serif;
+    color: #f0f0f0;
+    font-family: 'Philosopher', sans-serif;
 }
 
 .input-field input:valid ~ label,
 .input-field input:focus ~ label {
     font-size: 0.95rem;
-    background: #ffffff;
+    background: #f0f0f0;
+    color: var(--very-dark-blue);
     top: 0;
     padding: 5px;
 }
 
 .input-field input:focus {
-    background-color: #ffffff;
+    background-color: none;
     outline: none;
     box-shadow: none;
+}
+
+button {
+    border: none;
+    background-color: #f7f7f7;
+    color: var(--very-dark-blue);
+    font-weight: 600;
+    border-radius: 5px;
+    height: 3rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: grayscale(0);
+    transform: scale(1.02);
+}
+
+span {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+
+p {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #000;
+}
+
+@media only screen and (max-width: 990px) {
+    .section .login-box {
+        padding: 1rem 3rem;
+        width: 60%;
+    }
+
+    .section .signup-box {
+        padding: 1rem 3rem;
+        width: 60%;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .section .login-box {
+        padding: 1rem 3rem;
+        width: 80%;
+    }
+
+    .section .signup-box {
+        padding: 1rem 3rem;
+        width: 80%;
+    }
+    
 }
